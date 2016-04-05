@@ -122,8 +122,13 @@ public class AllPairs {
 	}
 	public static void main(String args[]){
 		AllPairs allpairs = new AllPairs();
-		String filename = "data/1000";
-		allpairs.n = 1000;
+		if (args.length != 3)
+		{
+			System.out.println("Error, need 3 args.");
+			return;
+		}
+		String filename = args[0];
+		allpairs.n = Integer.parseInt(args[1]);
 		// read in data
 		allpairs.readData(filename);
 		
@@ -132,9 +137,9 @@ public class AllPairs {
 		allpairs.normalize();
 		//allpairs.printV();
 		// calculate similar pairs
-		ArrayList<ResultType> O = allpairs.all_pairs_0(0.95);
+		ArrayList<ResultType> O = allpairs.all_pairs_0(Double.parseDouble(args[2]));
 		long endTime=System.currentTimeMillis();
-		System.out.println("time: "+(endTime-startTime)/1000.0+" s");    
+		System.out.println("time: "+(endTime-startTime)/1000.0+"s");    
 		
 		//allpairs.printResult(O);
 	}

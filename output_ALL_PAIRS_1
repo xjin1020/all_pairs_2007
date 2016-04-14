@@ -1,0 +1,12 @@
+1k vectors
+time: 0.497s
+time: 0.501s
+time: 0.545s
+10k vectors
+time: 134.678s
+time: 132.98s
+time: 121.505s
+100k vectors
+time: 51623.508s
+time: 17876.091s
+time: 16450.303s
